@@ -17,6 +17,6 @@ jobs:
         with:
           registry: ghcr.io
           username: "igorkosta"
-          password: ${{ secrets.DOCKER }}
+          password: ${{ secrets.GHCIO }}
           repository: mbanq/docker
           tags: latest
