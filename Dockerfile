@@ -1,3 +1,3 @@
-FROM docker:19.03.11
+FROM docker:dind
 
 MAINTAINER Mbanq <dev@mbanq.com>
