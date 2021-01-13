@@ -14,7 +14,6 @@ RUN apk update -q && apk upgrade -q && apk add --no-progress --quiet --no-cache 
     cargo && \
     cargo install cfn-guard && \
     pip install --upgrade --user -q awscli \
-    docker-compose \
-    awscli
+    docker-compose
 
 ENV PATH "/root/.cargo/bin:/root/.local/bin:${PATH}"
