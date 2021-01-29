@@ -10,8 +10,8 @@ RUN apk update -q && apk upgrade -q && apk add --no-progress --quiet --no-cache 
     make \
     openssl-dev \
     py3-pip \
-    jq \
-    pip install --upgrade --user -q awscli \
+    jq openssl; \
+    pip3 install --quiet --upgrade pip awscli \
     docker-compose
 
 ENV PATH "/root/.local/bin:${PATH}"
