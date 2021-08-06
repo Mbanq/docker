@@ -16,4 +16,6 @@ RUN apk update -q && apk upgrade -q && apk add --no-progress --quiet --no-cache 
     ansible-galaxy collection install community.aws amazon.aws community.general community.docker; \
     mkdir /etc/ansible/
 
+COPY ansible.cfg mkdir /etc/ansible/
+
 ENV PATH "/root/.local/bin:${PATH}"
