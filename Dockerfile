@@ -10,8 +10,9 @@ RUN apk update -q && apk upgrade -q && apk add --no-progress --quiet --no-cache 
     make \
     openssl-dev \
     py3-pip \
+    ansible \
     jq openssl; \
-    pip3 install --quiet --upgrade pip awscli \
-    docker-compose
+    pip3 install --quiet --upgrade pip awscli boto3 docker-compose; \
+    ansible-galaxy collection install community.aws amazon.aws community.general community.docker
 
 ENV PATH "/root/.local/bin:${PATH}"
